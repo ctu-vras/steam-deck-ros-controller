@@ -1,0 +1,5 @@
+repositories:
+  audio_common:
+    type: git
+    url: https://github.com/ros-drivers/audio_common
+    version: master 
