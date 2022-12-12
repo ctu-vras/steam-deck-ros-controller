@@ -1,0 +1,41 @@
+repositories:
+  cras_husky_description:
+    type: git
+    url: git@gitlab.fel.cvut.cz:cras/subt/husky-robot/cras_husky_description.git
+    version: master
+  cras_ouster_description:
+    type: git
+    url: git@gitlab.fel.cvut.cz:cras/subt/sensors/ouster/cras_ouster_description.git
+    version: master
+  dynamic_robot_state_publisher:
+    type: git
+    url: https://github.com/peci1/dynamic_robot_state_publisher/
+    version: master
+  filters:
+    type: git
+    url: https://github.com/ros/filters
+    version: noetic-devel
+  husky:
+    type: git
+    url: https://github.com/husky/husky
+    version: noetic-devel
+  relative_positional_controller:
+    type: git
+    url: git@gitlab.fel.cvut.cz:cras/subt/common/relative_positional_controller.git
+    version: master
+  ros-utils:
+    type: git
+    url: https://github.com/ctu-vras/ros-utils.git
+    version: master
+  spot_ros:
+    type: git
+    url: https://github.com/heuristicus/spot_ros
+    version: master
+  tracked_robot_tools:
+    type: git
+    url: git@gitlab.fel.cvut.cz:cras/subt/common/tracked_robot_tools.git
+    version: master
+  tradr-resources:
+    type: git
+    url: git@gitlab.fel.cvut.cz:cras/subt/tradr-robot/tradr-resources.git
+    version: master
