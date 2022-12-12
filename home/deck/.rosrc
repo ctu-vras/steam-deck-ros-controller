@@ -1,0 +1,5 @@
+# This file is sourced when ROS in conda is activated
+# Particularly, by file ~/mambaforge/envs/ros_env/etc/conda/activate.d/rosrc.sh
+
+export LD_PRELOAD=/home/deck/mambaforge/envs/ros_env/lib/libyaml-cpp.so
+. /home/deck/mambaforge/share/vcstool-completion/vcs.bash

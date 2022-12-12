@@ -1,0 +1,22 @@
+source /etc/screenrc
+
+defscrollback 100000
+
+#caption always '%{= dg} %{B}%H %{G}|%=%?%{d}%-w%?%{G}[ %{G}%n %t%?{%uw}%?%{G} ]%{w}%?%+w%?%=%{G}| %{B}%D %c'
+caption always "%{= KW} %H [%`] %{= Kw}|%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw %=%C%a %Y-%M-%d"
+
+# enable scrollback by shift-PgUp/PgDn
+#termcapinfo xterm|xterms|xs|rxvt ti@:te@
+termcapinfo xterm* ti@:te@
+
+#mousetrack on
+#defmousetrack on
+
+# ------------------------------------------------------------------------------
+# STARTUP SCREENS
+# ------------------------------------------------------------------------------
+
+# screen top
+# screen -t monkey ssh monkey
+# screen -t mail 8 mutt
+# screen -t daemon 9 tail -f /var/log/daemon.log
