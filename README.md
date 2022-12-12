@@ -20,6 +20,9 @@ Steps done to configure Steam Deck as a ROS robot controller.
 7. Make the filesystem read-write: `sudo steamos-readonly disable` .
 8. Enable SSH server: `sudo systemctl enable sshd.service && sudo systemctl start sshd.service` .
 9. Now you can finally connect to the deck via SSH from your laptop.
+10. Clone this repo into home directory of the deck user: `git clone https://github.com/ctu-vras/steam-deck-ros-controller` .
+11. Symlink or copy everything from `etc` folder to the respective locations on the Steam Deck.
+12. Symlink or copy everything from `home/deck` folder to your home directory.
 
 ## Install ROS Noetic
 
@@ -46,7 +49,8 @@ pip install -U vcstool
 ```bash
 mkdir -p workspaces/deck_ws/src
 cd workspaces/deck_ws/src
-# put here the jsk.repos and any other *.repos files from this repository
+# choose the .repos files you want here
+ln -s ~/steam-deck-ros-controller/home/deck/workspaces/deck_ws/src/jsk.repos ./
 for f in *.repos; do vcs import < $f; done
 conda activate ros_env # if not already in an environment
 cd ..
