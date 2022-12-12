@@ -1,0 +1,20 @@
+repositories:
+  jsk_common:
+    type: git
+    url: https://github.com/jsk-ros-pkg/jsk_common
+    version: master
+  jsk_common_msgs:
+    type: git
+    url: https://github.com/jsk-ros-pkg/jsk_common_msgs
+    version: master
+  jsk_visualization:
+    type: git
+    url: https://github.com/jsk-ros-pkg/jsk_visualization/
+    version: master
+  people:
+    type: git
+    url: https://github.com/wg-perception/people/
+    version: noetic
+  view_controller_msgs:
+    type: git
+    url: https://github.com/ros-visuali
