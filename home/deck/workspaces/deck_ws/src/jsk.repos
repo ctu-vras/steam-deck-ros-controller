@@ -17,4 +17,5 @@ repositories:
     version: noetic
   view_controller_msgs:
     type: git
-    url: https://github.com/ros-visuali
+    url: https://github.com/ros-visualization/view_controller_msgs
+    version: noetic-devel
