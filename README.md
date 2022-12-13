@@ -59,6 +59,9 @@ pip install -U vcstool
 ## Create the catkin workspace
 
 ```bash
+# Install packages that are not available in conda
+yay -S festival
+
 mkdir -p workspaces/deck_ws/src
 cd workspaces/deck_ws/src
 # choose the .repos files you want here
@@ -72,4 +75,9 @@ catkin config --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
 catkin config --skiplist husky_control husky_desktop husky_gazebo husky_navigation husky_simulator spot_driver sound_classification imagesift jsk_tilt_laser multi_map_server audio_video_recorder jsk_rosbag_tools jsk_recognition jsk_perception jsk_people_tracking_filter jsk_pcl_ros_utils jsk_pcl_ros jsk_recognition_utils jsk_recognition people_tracking_filter people leg_detector people_velocity_tracker people_velocity_tracker
 rosdep install --from-paths src --ignore-src -r
 catkin build
+
+# fix festival bug https://bugs.archlinux.org/task/67420 to make sound_play node working
+sudo sed -ibak 's/wholeutt (utt.synth (Utterance Text ""))/wholeutt (Utterance Text "")/' /usr/bin/text2wave
+# ugly fix to allow sound_play node to work
+ln -s /usr/lib/alsa-lib/libasound_module_pcm_pipewire.so /home/deck/mambaforge/envs/ros_env/lib/alsa-lib/libasound_module_pcm_pipewire.so
 ```
