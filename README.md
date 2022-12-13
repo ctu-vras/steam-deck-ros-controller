@@ -24,6 +24,18 @@ Steps done to configure Steam Deck as a ROS robot controller.
 11. Symlink or copy everything from `etc` folder to the respective locations on the Steam Deck.
 12. Symlink or copy everything from `home/deck` folder to your home directory.
 
+## Make the Arch Linux OS package manager usable
+
+```bash
+echo "keyserver hkps://keyserver.ubuntu.com" | sudo tee -a /etc/pacman.d/gnupg/gpg.conf
+wget https://archlinux.org/packages/core/any/archlinux-keyring/download -O ~/arch-keyring.tar.zst
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman-key --refresh-keys
+sudo pacman -U ~/arch-keyring.tar.zst
+yay -S base-devel
+```
+
 ## Install ROS Noetic
 
 ```bash
