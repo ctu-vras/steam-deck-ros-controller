@@ -1,0 +1,5 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+# Make sure the hostname of your Steam Deck (here, steamdeck) is at the 127.0.0.1 record, otherwise roslaunch won't be able to run
+127.0.0.1      localhost steamdeck
+::1            localhost
