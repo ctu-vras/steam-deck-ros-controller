@@ -53,8 +53,7 @@ conda install mamba -c conda-forge
 mamba create -n ros_env python=3.9
 conda activate ros_env
 conda config --env --add channels conda-forge
-conda config --env --add channels robostack
-conda config --env --add channels robostack-experimental
+conda config --env --add channels robostack-staging
 mamba install ros-noetic-desktop ros-noetic-image-transport-plugins
 mamba install compilers cmake pkg-config make ninja catkin_tools
 mamba install rosdep
@@ -66,8 +65,8 @@ pip install -U vcstool
 ## Create the catkin workspace
 
 ```bash
-# Install packages that are not available in conda
-yay -S festival
+# Install extra packages
+mamba install festvox-kallpc16k alsa-plugins
 
 mkdir -p workspaces/deck_ws/src
 cd workspaces/deck_ws/src
@@ -83,8 +82,6 @@ catkin config --skiplist husky_control husky_desktop husky_gazebo husky_navigati
 rosdep install --from-paths src --ignore-src -r
 catkin build
 
-# fix festival bug https://bugs.archlinux.org/task/67420 to make sound_play node working
-sudo sed -ibak 's/wholeutt (utt.synth (Utterance Text ""))/wholeutt (Utterance Text "")/' /usr/bin/text2wave
 # ugly fix to allow sound_play node to work
 ln -s /usr/lib/alsa-lib/libasound_module_pcm_pipewire.so /home/deck/mambaforge/envs/ros_env/lib/alsa-lib/libasound_module_pcm_pipewire.so
 ```
