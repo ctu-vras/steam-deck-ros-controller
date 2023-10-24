@@ -66,7 +66,7 @@ pip install -U vcstool
 
 ```bash
 # Install extra packages
-mamba install mesalib festvox-kallpc16k alsa-plugins
+mamba install mesalib mesa-libgl-devel-cos7-x86_64 festvox-kallpc16k alsa-plugins
 
 mkdir -p workspaces/deck_ws/src
 cd workspaces/deck_ws/src
