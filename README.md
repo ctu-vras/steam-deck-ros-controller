@@ -78,7 +78,7 @@ cd ..
 catkin init
 catkin config --extend /home/deck/mambaforge/envs/ros_env
 catkin config --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
-catkin config --skiplist husky_control husky_desktop husky_gazebo husky_navigation husky_simulator spot_driver sound_classification imagesift jsk_tilt_laser multi_map_server audio_video_recorder jsk_rosbag_tools jsk_recognition jsk_perception jsk_people_tracking_filter jsk_pcl_ros_utils jsk_pcl_ros jsk_recognition_utils jsk_recognition people_tracking_filter people leg_detector people_velocity_tracker people_velocity_tracker
+catkin config --skiplist husky_control husky_desktop husky_gazebo husky_navigation husky_simulator spot_driver sound_classification imagesift jsk_tilt_laser multi_map_server audio_video_recorder jsk_rosbag_tools jsk_recognition jsk_perception jsk_people_tracking_filter jsk_pcl_ros_utils jsk_pcl_ros jsk_recognition_utils jsk_recognition people_tracking_filter people leg_detector people_velocity_tracker people_velocity_tracker face_detector
 rosdep install --from-paths src --ignore-src -r
 catkin build
 
